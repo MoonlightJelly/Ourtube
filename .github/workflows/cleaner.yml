@@ -56,7 +56,7 @@ jobs:
           git add -f videos/
 
           if ! git diff --cached --quiet; then
-            git commit -m "[AVASAM] حذف تمام ویدیوها [skip ci]"
+            git commit -m "حذف تمام ویدیوها [skip ci]"
 
             PUSH_RETRY=0
             while [ $PUSH_RETRY -lt 5 ]; do
@@ -79,7 +79,7 @@ jobs:
                 echo "" >> videos/README.md
                 echo "---" >> videos/README.md
                 git add -f videos/
-                git diff --cached --quiet || git commit -m "[AVASAM] حذف تمام ویدیوها [skip ci]"
+                git diff --cached --quiet || git commit -m "حذف تمام ویدیوها [skip ci]"
               fi
             done
           else
