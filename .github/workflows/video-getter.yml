@@ -347,7 +347,7 @@ jobs:
                   printf '%s\n' ""
                   printf '%s\n' "---"
                   printf '%s\n' ""
-                  printf '%s\n' "*This tool created by [avasam.ir](https://avasam.ir)*"
+                  
                 } > "$README_FILE"
 
                 echo "Created README.md"
@@ -417,7 +417,7 @@ jobs:
                     printf '%s\n' ""
                     printf '%s\n' "---"
                     printf '%s\n' ""
-                    printf '%s\n' "*This tool created by [avasam.ir](https://avasam.ir)*"
+                   
                   } > "$README_FILE"
 
                   echo "Created password-protected zip archive and README.md"
@@ -477,7 +477,7 @@ jobs:
                     printf '%s\n' ""
                     printf '%s\n' "---"
                     printf '%s\n' ""
-                    printf '%s\n' "*This tool created by [avasam.ir](https://avasam.ir)*"
+                    
                   } > "$README_FILE"
 
                   echo "Copied file and created README.md"
@@ -689,7 +689,7 @@ jobs:
               } > videos/README.md
               git add -f videos/README.md
               if ! git diff --cached --quiet; then
-                git commit -m "[AVASAM] Initialize videos folder [skip ci]"
+                git commit -m "Initialize videos folder [skip ci]"
                 PUSH_RETRY=0
                 while [ $PUSH_RETRY -lt 5 ]; do
                   PUSH_RETRY=$((PUSH_RETRY + 1))
@@ -741,7 +741,7 @@ jobs:
           git add -f videos/README.md
 
           if ! git diff --cached --quiet; then
-            git commit -m "[AVASAM] YouTube download [skip ci]"
+            git commit -m "YouTube download [skip ci]"
             PUSH_RETRY=0
             while [ $PUSH_RETRY -lt 10 ]; do
               PUSH_RETRY=$((PUSH_RETRY + 1))
@@ -757,11 +757,11 @@ jobs:
                 git add -f videos/
                 regenerate_master_readme
                 git add -f videos/README.md
-                git diff --cached --quiet || git commit -m "[AVASAM] YouTube download [skip ci]"
+                git diff --cached --quiet || git commit -m "YouTube download [skip ci]"
               fi
             done
           fi
           echo "=========================================="
           echo "All files pushed successfully!"
-          echo "made in AVASAM (https://avasam.ir)"
+          
           echo "=========================================="
